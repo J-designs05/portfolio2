@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap');
 html{
     margin: 0px;
     padding: 0px;
@@ -12,6 +13,56 @@ body{
     background-color: black;
     overflow-x: hidden;
 }
+#preloader{
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    align-items: center; /* align items vertically */
+    justify-content: center; /* align items horizontally */
+    
+}
+.circle{
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center; /* align items vertically */
+    justify-content: center; /* align items horizontally */
+    background: url("../images/ryba2.png");
+    background-repeat: repeat-x;
+    animation: animate 15s linear infinite;
+}
+
+#preloader_logo_text{
+    font-size: 10vw;
+    font-family: "kavoon";
+    font-weight: 1000;
+}
+@keyframes animate {
+	0%{
+		background-position: left 0 top 15%;
+	}
+	20%{
+		background-position: left 800PX top 30%;
+	}
+	40%{
+		background-position: left 1800px top 40%;
+	}
+	60%{
+		background-position: left 2400px top 60%;
+	}
+	80%{
+		background-position: left 3400px top 30%;
+	}
+	100%{
+		background-position: left 4400px top 15%;
+	}
+}
+
 nav{
     color: white;
     display: flex;
@@ -347,7 +398,7 @@ footer{
         display: inline;
         fill: white;
      }
-     #navBarBox2{
+    #navBarBox2{
         z-index: 1;
         width: 100%;
         height: 100%;
